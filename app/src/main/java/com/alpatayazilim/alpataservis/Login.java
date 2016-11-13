@@ -9,6 +9,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class Login extends Activity {
 
@@ -23,6 +24,12 @@ public class Login extends Activity {
         }
         Button giris = (Button) findViewById(R.id.btn_giris);
         buttonEffect(giris);
+        giris.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Çiçek :)",Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     public static void buttonEffect(View button){
